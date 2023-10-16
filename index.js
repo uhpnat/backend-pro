@@ -71,5 +71,5 @@ app.post("/uploads", upload.single("image"), (req, res) => {
 });
 app.get("/view-image/:filename", (req, res) => {
   const { filename } = req.params;
-  res.sendFile(path.join(__dirname, "uploads", filename));
+ res.sendFile(path.join("uploads", filename));
 });
